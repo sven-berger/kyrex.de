@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans:
+        "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    background-image: url("/images/body.png");
+    font-size: 16px;
+}
+
+.snippet-title {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-weight: lighter;
+    font-size: 20px;
+    margin: 30px 0;
+}
+
+.snippet-title::before,
+.snippet-title::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+    margin: 0 10px;
+}
+
+.ck-editor__editable_inline {
+    min-height: 260px !important;
+    background-color: #fafafa !important;
+}
+
+.wp-rich-content,
+.ck-content {
+    line-height: 1.6 !important ;
+}
+
+.wp-rich-content h1,
+.wp-rich-content h2,
+.wp-rich-content h3,
+.wp-rich-content h4,
+.ck-content h1,
+.ck-content h2,
+.ck-content h3,
+.ck-content h4 {
+    margin-top: 1.25rem !important;
+    margin-bottom: 0.5rem !important ;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+}
+
+.wp-rich-content h1,
+.ck-content h1 {
+    font-size: 1.55rem !important;
+}
+
+.wp-rich-content h2,
+.ck-content h2 {
+    font-size: 1.35rem !important;
+}
+
+.wp-rich-content h3,
+.ck-content h3 {
+    font-size: 1.2rem !important;
+}
+
+.wp-rich-content p,
+.ck-content p {
+    margin: 0.5rem 0 !important;
+}
+
+.wp-rich-content ul,
+.wp-rich-content ol,
+.ck-content ul,
+.ck-content ol {
+    margin: 0.75rem 0 !important;
+    padding-left: 1.5rem !important;
+    list-style-position: outside !important;
+}
+
+.wp-rich-content ul,
+.ck-content ul {
+    list-style-type: disc !important;
+}
+
+.wp-rich-content ol,
+.ck-content ol {
+    list-style-type: decimal !important;
+}
+
+.wp-rich-content li,
+.ck-content li {
+    margin-bottom: 0.5rem !important;
+    display: list-item !important;
+}
+
+.wp-rich-content ul li::marker,
+.ck-content ul li::marker {
+    content: "• " !important;
+}
+
+.wp-rich-content ol li::marker,
+.ck-content ol li::marker {
+    font-variant-numeric: tabular-nums !important;
+}
+
+.wp-rich-content blockquote,
+.ck-content blockquote {
+    margin: 0.75rem 0 !important;
+    padding-left: 1rem !important;
+    border-left: 4px solid #cbd5e1 !important;
+    border: #fafafa !important;
+    color: #475569 !important;
+    font-style: italic !important;
+}
+
+.wp-rich-content a,
+.ck-content a {
+    text-decoration: underline !important;
+}
+
+.wp-rich-content table,
+.ck-content table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 1rem 0 !important;
+}
+
+.wp-rich-content figure.table,
+.ck-content figure.table {
+    width: 100% !important;
+    margin: 1rem 0 !important;
+    overflow-x: auto !important;
+}
+
+.wp-rich-content figure.table table,
+.ck-content figure.table table {
+    width: 100% !important;
+}
+
+.wp-rich-content table th,
+.wp-rich-content table td,
+.ck-content table th,
+.ck-content table td {
+    border: 1px solid #cbd5e1 !important;
+    padding: 0.5rem 0.65rem !important;
+    text-align: left !important;
+    vertical-align: top !important;
+}
+
+.wp-rich-content table th,
+.ck-content table th {
+    font-weight: 600 !important;
+    background: #f1f5f9 !important;
+}
+
+.wp-rich-content pre,
+.ck-content pre {
+    margin-top: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+    overflow-x: auto !important;
+    border-radius: 0.5rem !important;
+}
+
+.hljs {
+    border-radius: 1rem !important;
+    padding: 25px !important;
+    padding: 1rem !important;
+    background-color: #eeeeee !important;
+    font-size: 14px !important;
+}
+
+.ck::not(.ck .ck-powered-by) {
+    border-radius: 1rem 1rem 0 0 !important;
+}
+
+.ck-rounded-corners {
+    border-radius: 0 0 1rem 1rem !important;
+}
