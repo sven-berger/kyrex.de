@@ -18,6 +18,21 @@ cd "$WORK_TREE"
 echo "Installing PHP dependencies..."
 composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader
 
+echo "Running database migrations..."
+php artisan migrate --force
+
+if [ -f "package.json" ] && command -v npm >/dev/null 2>&1; then
+	echo "Installing Node dependencies..."
+	if [ -f "package-lock.json" ]; then
+		npm ci
+	else
+		npm install
+	fi
+
+	echo "Building frontend assets..."
+	npm run build
+fi
+
 echo "Building Laravel caches..."
 php artisan optimize:clear
 php artisan config:cache
