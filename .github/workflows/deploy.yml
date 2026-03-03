@@ -21,4 +21,5 @@ jobs:
             git fetch origin main
             git checkout -f main
             git reset --hard origin/main
+            chmod +x /var/www/kyrex.de/deploy/deploy.sh
             /var/www/kyrex.de/deploy/deploy.sh
