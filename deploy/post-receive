@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+BRANCH="main"
+REPO_DIR="/home/sven/kyrex.de.git"
+WORK_TREE="/var/www/kyrex.de"
+
+while read -r oldrev newrev refname; do
+  if [ "$refname" != "refs/heads/${BRANCH}" ]; then
+    continue
+  fi
+
+  git --work-tree="$WORK_TREE" --git-dir="$REPO_DIR" checkout -f "$BRANCH"
+  if [ -x "$WORK_TREE/deploy/deploy.sh" ]; then
+    "$WORK_TREE/deploy/deploy.sh"
+  fi
+done
