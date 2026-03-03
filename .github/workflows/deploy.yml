@@ -17,7 +17,8 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             set -e
-            cd /home/sven/kyrex.de.git
+            cd /var/www/kyrex.de
             git fetch origin main
-            git --work-tree=/var/www/kyrex.de --git-dir=/home/sven/kyrex.de.git checkout -f main
+            git checkout -f main
+            git reset --hard origin/main
             /var/www/kyrex.de/deploy/deploy.sh
