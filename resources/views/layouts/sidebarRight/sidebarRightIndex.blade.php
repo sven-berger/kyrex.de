@@ -13,5 +13,4 @@
     <div class="pb-2 px-3">
         <x-ui.button url="#" variant="success" class="justify-center text-[13px] w-full rounded-t-0" id="counterReset">Counter zurücksetzen</x-ui.button>
     </div>
-
 </x-ui.box>
