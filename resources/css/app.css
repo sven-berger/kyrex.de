@@ -21,6 +21,10 @@ body {
     font-size: 16px;
 }
 
+[x-cloak] {
+    display: none !important;
+}
+
 .snippet-title {
     text-align: center;
     display: flex;
@@ -185,10 +189,12 @@ body {
     font-size: 14px !important;
 }
 
-.ck::not(.ck .ck-powered-by) {
+.ck.ck-reset_all,
+.ck-reset_all *:not(.ck-reset_all-excluded *) {
     border-radius: 1rem 1rem 0 0 !important;
 }
 
 .ck-rounded-corners {
     border-radius: 0 0 1rem 1rem !important;
+    margin-bottom: 1rem !important;
 }
