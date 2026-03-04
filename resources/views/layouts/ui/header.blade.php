@@ -6,19 +6,20 @@ $navLinks = [
 ['label' => 'Test #2', 'url' => '/test2'],
 ];
 
-$visibleMobileLinks = array_slice($navLinks, 0, 2);
-$moreMobileLinks = array_slice($navLinks, 2);
+$mobileVisibleCount = 1;
+$visibleMobileLinks = array_slice($navLinks, 0, $mobileVisibleCount);
+$moreMobileLinks = array_slice($navLinks, $mobileVisibleCount);
 @endphp
 
 <header class="rounded-lg border border-slate-300 bg-white px-3 py-2 shadow-sm" x-data="{ mobileNavOpen: false }"
     @click.outside="mobileNavOpen = false">
-    <div class="flex items-center justify-between gap-3">
+    <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <h1 class="text-sm font-bold text-slate-900">
             <a href="{{ route('home') }}">CodeVoyage</a>
         </h1>
 
-        <nav class="text-xs text-slate-600">
-            <ul class="hidden items-center gap-4 md:flex">
+        <nav class="text-xs text-slate-600 sm:min-w-0">
+            <ul class="hidden items-center gap-4 lg:flex">
                 @foreach ($navLinks as $link)
                 <li>
                     <a href="{{ $link['url'] }}" class="hover:text-slate-900">{{ $link['label'] }}</a>
@@ -26,7 +27,7 @@ $moreMobileLinks = array_slice($navLinks, 2);
                 @endforeach
             </ul>
 
-            <div class="relative flex items-center gap-3 md:hidden">
+            <div class="relative flex items-center justify-end gap-3 lg:hidden">
                 @foreach ($visibleMobileLinks as $link)
                 <a href="{{ $link['url'] }}" class="hover:text-slate-900">{{ $link['label'] }}</a>
                 @endforeach
