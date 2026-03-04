@@ -10,7 +10,7 @@
     <div class="pb-2 px-3">
         <x-ui.button url="#" variant="danger" class="justify-center text-[13px] w-full rounded-t-0" id="counterDecrease">Counter verringern</x-ui.button>
     </div>
-    <div class="pb-2 px-3">
+    <div class="pb-3 px-3">
         <x-ui.button url="#" variant="success" class="justify-center text-[13px] w-full rounded-t-0" id="counterReset">Counter zurücksetzen</x-ui.button>
     </div>
 </x-ui.box>
