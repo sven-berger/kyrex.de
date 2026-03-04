@@ -8,6 +8,8 @@ use App\Http\Controllers\Auth\GoogleController;
 use App\Http\Controllers\Auth\GithubController;
 use App\Http\Controllers\DummyPageController;
 use App\Http\Controllers\ACP\ACPIndexController as ACPIndex;
+use App\Http\Controllers\ACP\app\AppCategoriesController as ACPAppCategories;
+use App\Http\Controllers\ACP\app\AppPagesController as ACPAppPages;
 use App\Http\Controllers\ACP\wissensportal\WissensportalCategorysController as ACPWPCategories;
 use App\Http\Controllers\ACP\wissensportal\WissensportalIndexController as ACPWPIndex;
 use App\Http\Controllers\ACP\wissensportal\WissensportalPagesController as ACPWPPages;
@@ -46,6 +48,21 @@ Route::delete('/dummy-page/{entry}', [DummyPageController::class, 'destroy'])->n
 //// ** Adminbereich ** //
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/acp', [ACPIndex::class, 'acpAction'])->name('acp');
+
+    Route::get('/acp/app/categories', [ACPAppCategories::class, 'index'])->name('acp.app.categories');
+    Route::post('/acp/app/categories', [ACPAppCategories::class, 'store'])->name('acp.app.categories.store');
+    Route::get('/acp/app/category-edit/{category}', [ACPAppCategories::class, 'edit'])->name('acp.app.categories.edit');
+    Route::patch('/acp/app/category-edit/{entry}', [ACPAppCategories::class, 'update'])->name('acp.app.categories.update');
+    Route::patch('/acp/app/categories/{entry}/move-up', [ACPAppCategories::class, 'moveUp'])->name('acp.app.categories.move-up');
+    Route::patch('/acp/app/categories/{entry}/move-down', [ACPAppCategories::class, 'moveDown'])->name('acp.app.categories.move-down');
+    Route::delete('/acp/app/categories/{entry}', [ACPAppCategories::class, 'destroy'])->name('acp.app.categories.destroy');
+
+    Route::get('/acp/app/pages', [ACPAppPages::class, 'index'])->name('acp.app.pages');
+    Route::post('/acp/app/pages', [ACPAppPages::class, 'store'])->name('acp.app.pages.store');
+    Route::get('/acp/app/page-edit/{page}', [ACPAppPages::class, 'edit'])->name('acp.app.pages.edit');
+    Route::patch('/acp/app/page-edit/{entry}', [ACPAppPages::class, 'update'])->name('acp.app.pages.update');
+    Route::delete('/acp/app/pages/{entry}', [ACPAppPages::class, 'destroy'])->name('acp.app.pages.destroy');
+
     Route::redirect('/acp/wissensportal/categorys', '/acp/wissensportal/categories');
     Route::get('/acp/wissensportal/wp-categories', [ACPWPCategories::class, 'wissensportalCategoriesAction'])->name('acp.wissensportal.categories');
     Route::post('/acp/wissensportal/wp-categories', [ACPWPCategories::class, 'store'])->name('acp.wissensportal.categories.store');

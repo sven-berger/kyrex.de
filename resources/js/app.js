@@ -1,3 +1,5 @@
+import "./counter";
+
 import "./bootstrap";
 import {
     ClassicEditor,

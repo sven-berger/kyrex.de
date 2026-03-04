@@ -9,8 +9,7 @@ $visibleMobileLinks = array_slice($navLinks, 0, $mobileVisibleCount);
 $moreMobileLinks = array_slice($navLinks, $mobileVisibleCount);
 @endphp
 
-<header class="rounded-lg border border-slate-300 bg-white px-3 py-2 shadow-sm" x-data="{ mobileNavOpen: false }"
-    @click.outside="mobileNavOpen = false">
+<x-ui.content x-data="{ mobileNavOpen: false }" @click.outside="mobileNavOpen = false">
     <div class="flex flex-col items-center gap-2 lg:flex-row lg:items-center lg:justify-start">
         <h1 class="text-sm font-bold text-slate-900 lg:shrink-0">
             <a href="{{ route('home') }}">CodeVoyage</a>
@@ -48,4 +47,4 @@ $moreMobileLinks = array_slice($navLinks, $mobileVisibleCount);
             </div>
         </nav>
     </div>
-</header>
+</x-ui.content>

@@ -7,6 +7,8 @@
         <div class="mt-4 flex gap-2">
             <x-ui.button url="{{ route('home') }}" variant="warning">Zur Startseite</x-ui.button>
             <x-ui.button url="{{ route('dummy-page.index') }}" variant="primary">Zur Dummy-Seite</x-ui.button>
+            <x-ui.button url="{{ route('acp.app.categories') }}" variant="secondary">App Kategorien</x-ui.button>
+            <x-ui.button url="{{ route('acp.app.pages') }}" variant="secondary">App Seiten</x-ui.button>
         </div>
     </x-ui.page>
 </x-layouts.admin>

@@ -19,24 +19,24 @@
             @include('layouts.ui.header')
             <main class="flex min-h-0 flex-1 flex-col gap-2 lg:flex-row lg:items-stretch">
                 <div class="lg:hidden">
-                    <div class="rounded-lg border border-slate-300 bg-white p-2 shadow-sm">
+                    <x-ui.content>
                         <div class="flex gap-2 text-sm">
                             <button
                                 type="button"
-                                class="flex-1 rounded-md border border-slate-300 px-3 py-2 text-slate-700 hover:bg-slate-100"
+                                class="flex-1 rounded-xl border border-slate-300 px-3 py-2 text-slate-700 hover:bg-slate-100"
                                 @click="leftSidebarOpen = true">
                                 Linke Seitenleiste
                             </button>
                             @unless(request()->routeIs('acp*'))
                             <button
                                 type="button"
-                                class="flex-1 rounded-md border border-slate-300 px-3 py-2 text-slate-700 hover:bg-slate-100"
+                                class="flex-1 rounded-xl border border-slate-300 px-3 py-2 text-slate-700 hover:bg-slate-100"
                                 @click="rightSidebarOpen = true">
                                 Rechte Seitenleiste
                             </button>
                             @endunless
                         </div>
-                    </div>
+                    </x-ui.content>
                 </div>
 
                 <aside class="hidden w-65 shrink-0 flex-col gap-2 lg:flex">
@@ -58,7 +58,7 @@
                 </div>
 
                 @unless(request()->routeIs('acp*'))
-                <aside class="hidden w-44 shrink-0 flex-col gap-2 lg:flex">
+                <aside class="hidden w-65 shrink-0 flex-col gap-2 lg:flex">
                     @if (request()->routeIs('wissensportal*'))
                     @include('layouts.sidebarRight.sidebarRightWissensportal')
                     @else
@@ -129,9 +129,9 @@
                 @endunless
             </main>
 
-            <footer class="rounded-lg border border-slate-300 bg-white px-3 py-2 text-[15px] text-slate-500 shadow-sm">
+            <x-ui.content>
                 @include('layouts.ui.footer')
-            </footer>
+            </x-ui.content>
         </div>
     </div>
 </body>

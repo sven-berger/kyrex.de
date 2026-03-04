@@ -1,6 +1,15 @@
-<x-ui.box title="Wissensportal">
+@forelse ($appAcpGroups as $group)
+<x-ui.box title="{{ $group['title'] }}">
     <ul class="space-y-2 p-3 text-xs text-slate-700 rounded-b-2xl">
-        <li><a href="{{ route('acp.wissensportal.categories') }}">Kategorien</a></li>
-        <li><a href="{{ route('acp.wissensportal.pages') }}">Seiten</a></li>
+        @foreach ($group['pages'] as $page)
+        <li>
+            <a href="{{ $page->url }}" class="hover:text-slate-900">{{ $page->name }}</a>
+        </li>
+        @endforeach
     </ul>
 </x-ui.box>
+@empty
+<x-ui.box title="ACP">
+    <p class="p-3 text-xs text-slate-700">Noch keine Seiten vorhanden.</p>
+</x-ui.box>
+@endforelse
