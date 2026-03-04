@@ -2,10 +2,6 @@
 $navLinks = [
 ['label' => 'Startseite', 'url' => route('home')],
 ['label' => 'Wissensportal', 'url' => route('wissensportal')],
-['label' => 'Test #1', 'url' => '/test1'],
-['label' => 'Test #2', 'url' => '/test2'],
-['label' => 'Test #1', 'url' => '/test1'],
-['label' => 'Test #2', 'url' => '/test2'],
 ];
 
 $mobileVisibleCount = 4;
