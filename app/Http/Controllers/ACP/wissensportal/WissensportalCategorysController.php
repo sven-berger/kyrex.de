@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\ACP\wissensportal;
+namespace App\Http\Controllers\ACP\Wissensportal;
 
 use App\Models\WissensPortalCategories;
 use App\Http\Controllers\Controller;

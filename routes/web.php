@@ -10,9 +10,9 @@ use App\Http\Controllers\DummyPageController;
 use App\Http\Controllers\ACP\ACPIndexController as ACPIndex;
 use App\Http\Controllers\ACP\app\AppCategoriesController as ACPAppCategories;
 use App\Http\Controllers\ACP\app\AppPagesController as ACPAppPages;
-use App\Http\Controllers\ACP\wissensportal\WissensportalCategorysController as ACPWPCategories;
-use App\Http\Controllers\ACP\wissensportal\WissensportalIndexController as ACPWPIndex;
-use App\Http\Controllers\ACP\wissensportal\WissensportalPagesController as ACPWPPages;
+use App\Http\Controllers\ACP\Wissensportal\WissensportalCategorysController as ACPWPCategories;
+use App\Http\Controllers\ACP\Wissensportal\WissensportalIndexController as ACPWPIndex;
+use App\Http\Controllers\ACP\Wissensportal\WissensportalPagesController as ACPWPPages;
 
 Route::get('/', [HomeController::class, 'homeAction'])->name('home');
 Route::redirect('/wissenspolrtal', '/wissensportal');
