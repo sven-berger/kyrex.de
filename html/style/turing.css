@@ -176,6 +176,11 @@ td {
     display: none;
 }
 
+.pageHeader h1 {
+    justify-content: end;
+    padding-right: inherit;
+}
+
 /* ============ Media Queries ============ */
 
 @media (max-width: 767px) {
