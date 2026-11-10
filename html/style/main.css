@@ -1,0 +1,139 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none ;
+    color: inherit;
+    
+}
+
+section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 23px; 
+    border: 1px solid #ccc;
+}
+
+section:nth-child(1) {
+    background-color: #ecf0f1;
+}
+
+section:nth-child(1):hover {
+    background-color: #d0d7de;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section:nth-child(2):hover {
+    background-color: #c8e6e4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}   
+
+section:nth-child(2) {
+    background-color: #e0f2f1;
+}
+
+section:nth-child(3) {
+    background-color: #f3e5f5;
+}
+
+section:nth-child(3):hover {
+    background-color: #e1bee7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section:nth-child(4) {
+    background-color: #fce4ec;
+}
+section:nth-child(4):hover {
+    background-color: #f8bbd0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section:nth-child(5) {
+    background-color: #f1f8e9;
+}
+section:nth-child(5):hover {
+    background-color: #dcedc8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section:nth-child(6) {
+    background-color: #ffe0b2;
+}
+section:nth-child(6):hover {
+    background-color: #ffcc80;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767px) {
+    section {
+        margin: 20px 0;
+    }
+}
+
+.turingPicture {
+    padding: 20px; 
+    border-width: 2px;
+}
+
+.turingText {
+    font-style: italic;
+    font-size: 12px;
+    margin: 2px 0;
+}
+
+@media (min-width: 768px) {
+    article {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+h1 {
+    margin-top: 0;
+}
+
+hr {
+    border-color: ;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    margin-bottom: 0;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h1::before, h1::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid green;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header h1::before,
+header h1::after {
+    display: none;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+header, footer {
+    background-color: #d8c5b4;
+    padding: 20px;
+    border-radius: 23px;
+    border: 1px solid aliceblue;
+}
