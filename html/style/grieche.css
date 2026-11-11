@@ -3,33 +3,40 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:
-    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
-    Arial, sans-serif;
+  font-family: "Lora";
+  font-size: 1.2rem;
 
   --primary-color: #3498db;
   --primary-button-hover: #2980b9;
   --primary-content-bg: #34495e;
   --primary-menu-bg: #2980b9;
   --primary-text-color: #fafafa;
+  --second-button-bg: #fafafa;
+  --second-button-hover: #fff;
 
   --pizza-hero-bg: url("../images/grieche/grieche-hero.jpg");
   --pizza-info-bg: url("../images/grieche/info.jpg");
   --pizza-about-1: url("../images/grieche/about-1.jpg");
   --pizza-about-2: url("../images/grieche/about-2.jpg");
   --pizza-about-3: url("../images/grieche/about-3.jpg");
-
-  --second-button-bg: #fafafa;
-  --second-button-hover: #fff;
 }
 
 @font-face {
-  font-family: "Handlee";
-  src: url("../fonts/Handlee-Regular.ttf") format("truetype");
+  font-family: "FireSans";
+  src: url("../fonts/FiraSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Lora";
+  src: url("../fonts/Lora-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 html {
   scroll-behavior: smooth;
@@ -158,7 +165,7 @@ a:hover:not(.button) {
 
 .pageHeroMessage h2,
 .pageHeroMessage h3 {
-  font-family: "Handlee", sans-serif;
+  font-family: "FireSans", sans-serif;
   width: min(40rem, calc(100% - 2rem));
 }
 

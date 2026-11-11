@@ -3,9 +3,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:
-    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
-    Arial, sans-serif;
+  font-family: "AgravePro";
+  font-size: 1.2rem;
 
   --primary-color: #ff6347;
   --primary-button-hover: #ff4500;
@@ -14,14 +13,22 @@ body {
   --primary-text-color: #fafafa;
   --second-button-bg: #666;
   --second-button-hover: #fff;
+
   --pizza-hero-bg: url("../images/pizzeria/pizza-hero.jpg");
   --pizza-info-bg: url("../images/pizzeria/info.jpg");
   --pizza-about-1: url("../images/pizzeria/about-1.jpg");
   --pizza-about-2: url("../images/pizzeria/about-2.jpg");
   --pizza-about-3: url("../images/pizzeria/about-3.jpg");
-
-
 }
+
+@font-face {
+  font-family: "AgravePro";
+  src: url("../fonts/AgravePro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 @font-face {
   font-family: "Handlee";
