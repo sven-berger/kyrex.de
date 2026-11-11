@@ -1,0 +1,341 @@
+/* Grundlagen und Farben */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+
+  --primary-color: #3498db;
+  --primary-button-hover: #2980b9;
+  --primary-content-bg: #34495e;
+  --primary-menu-bg: #2980b9;
+  --primary-text-color: #fafafa;
+
+  --pizza-hero-bg: url("../images/grieche/grieche-hero.jpg");
+  --pizza-info-bg: url("../images/grieche/info.jpg");
+  --pizza-about-1: url("../images/grieche/about-1.jpg");
+  --pizza-about-2: url("../images/grieche/about-2.jpg");
+  --pizza-about-3: url("../images/grieche/about-3.jpg");
+}
+
+@font-face {
+  font-family: "Handlee";
+  src: url("../fonts/Handlee-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Typografie */
+h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--primary-color);
+}
+
+h2:not(.pageHero h2) {
+  border-bottom: 1px solid var(--primary-color);
+  padding-bottom: 5px;
+}
+
+/* Links und Buttons */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover:not(.button) {
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: var(--primary-button-hover);
+}
+
+/* Hauptnavigation und Footer */
+.mainMenu,
+.pageFooter {
+  color: var(--primary-text-color);
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-menu-bg);
+  text-transform: uppercase;
+  font-size: 23px;
+  padding: 15px 0;
+}
+
+.mainMenu ul,
+.pageFooter ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footerMenu {
+  display: block;
+}
+
+.footerCopyright {
+  display: flex;
+  color: var(--primary-text-color);
+  justify-content: center;
+  background-color: var(--primary-menu-bg);
+  padding: 20px 0;
+}
+
+/* Hero-Bereich */
+.pageHero {
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    var(--pizza-hero-bg) center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-text-color);
+  opacity: 0.8;
+}
+
+.pageHeroMessage h2,
+.pageHeroMessage h3 {
+  font-family: "Handlee", sans-serif;
+  width: min(40rem, calc(100% - 2rem));
+}
+
+.pageHero h3 {
+  margin: 0;
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  font-weight: 400;
+}
+
+/* Glas-Container und Öffnungszeiten */
+.pageHeroMessage,
+.openingHoursWrapper {
+  display: grid;
+  gap: 20px;
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--primary-text-color);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.openingHours {
+  text-align: left;
+}
+
+.openingHours td {
+  padding: 10px;
+}
+
+/* Gemeinsame Abschnitte: Über uns und Kontakt */
+.aboutUs,
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--primary-content-bg);
+  color: var(--primary-text-color);
+  min-height: 50vh;
+}
+
+/* Über uns und Bildergalerie */
+.aboutUsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.aboutUsPictures {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 2fr 1fr;
+  grid-auto-rows: 200px;
+}
+
+.aboutUsPictures img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.aboutUsPictures img:first-child {
+  grid-row: span 2;
+}
+
+.aboutUsPictures img:nth-child(2) {
+  background-image: var(--pizza-about-2);
+}
+
+.aboutUsPictures img:nth-child(3) {
+  background-image: var(--pizza-about-3);
+}
+
+/* Öffnungszeiten-Bereich */
+.info {
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    var(--pizza-info-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  color: var(--primary-text-color);
+  opacity: 0.9;
+}
+
+/* Kontaktbereich */
+.contactContainer {
+  display: grid;
+  gap: clamp(2rem, 4vw, 2.5rem);
+  align-items: center;
+  max-width: 1200px;
+  grid-template-columns: 2fr 1fr;
+}
+
+.contactInfo h2 {
+  margin-top: 0;
+}
+
+.contactTeam img {
+  width: 50%;
+  border-radius: 10px;
+}
+
+/* Gemeinsame Inhaltsbreite */
+.aboutUsContainer,
+.contactContainer {
+  width: min(75rem, calc(100% - 4rem));
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .pageHero {
+    min-height: 100vh;
+    padding: 2rem 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .mainMenu,
+  .pageFooter {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .mainMenu ul,
+  .pageFooter ul {
+    gap: 0.75rem 1.25rem;
+  }
+
+  .pageHero {
+    padding: 20px;
+  }
+
+  .pageHeroMessage {
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .pageHeroMessage h2 {
+    font-size: clamp(4rem, 14vw, 6rem);
+  }
+
+  .pageHeroMessage h3 {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+  }
+
+  .aboutUs,
+  .contact {
+    min-height: 0;
+    padding: 3rem 0;
+  }
+
+  .aboutUsContainer,
+  .contactContainer {
+    width: calc(100% - 2rem);
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .aboutUsPictures {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: clamp(8rem, 32vw, 12rem);
+    gap: 0.75rem;
+  }
+
+  .aboutUsPictures img:first-child {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+
+  .contactTeam img {
+    display: block;
+    height: auto;
+  }
+
+  .info {
+    min-height: 0;
+    padding: 3rem 1rem;
+  }
+
+  .openingHoursWrapper {
+    width: min(100%, 30rem);
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .openingHours {
+    width: 100%;
+  }
+
+  .openingHours td {
+    padding: 0.5rem 0.25rem;
+  }
+}
+
+/* Barrierefreiheit: Animation bei reduzierter Bewegung deaktivieren */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
