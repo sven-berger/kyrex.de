@@ -373,10 +373,3 @@ a:hover:not(.button) {
     padding: 0.5rem 0.25rem;
   }
 }
-
-/* Barrierefreiheit: Animation bei reduzierter Bewegung deaktivieren */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}

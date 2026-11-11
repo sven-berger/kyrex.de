@@ -22,17 +22,16 @@ body {
 }
 
 @font-face {
-  font-family: "AgravePro";
-  src: url("../fonts/AgravePro-Regular.ttf") format("truetype");
+  font-family: "Handlee";
+  src: url("../fonts/Handlee-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: "Handlee";
-  src: url("../fonts/Handlee-Regular.ttf") format("truetype");
+  font-family: "AgravePro";
+  src: url("../fonts/AgravePro-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -363,12 +362,5 @@ a:hover:not(.button) {
 
   .openingHours td {
     padding: 0.5rem 0.25rem;
-  }
-}
-
-/* Barrierefreiheit: Animation bei reduzierter Bewegung deaktivieren */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
   }
 }
