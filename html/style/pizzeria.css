@@ -12,12 +12,15 @@ body {
   --primary-content-bg: #333;
   --primary-menu-bg: #666;
   --primary-text-color: #fafafa;
-
+  --second-button-bg: #666;
+  --second-button-hover: #fff;
   --pizza-hero-bg: url("../images/pizzeria/pizza-hero.jpg");
   --pizza-info-bg: url("../images/pizzeria/info.jpg");
   --pizza-about-1: url("../images/pizzeria/about-1.jpg");
   --pizza-about-2: url("../images/pizzeria/about-2.jpg");
   --pizza-about-3: url("../images/pizzeria/about-3.jpg");
+
+
 }
 
 @font-face {
@@ -44,7 +47,7 @@ h3 {
 }
 
 h2:not(.pageHero h2) {
-  border-bottom: 1px solid var(--primary-text-color);
+  border-bottom: 1px solid var(--primary-color);
   padding-bottom: 5px;
 }
 
@@ -60,18 +63,41 @@ a:hover:not(.button) {
   color: var(--primary-color);
 }
 
-.button {
+.button, .secondButton {
   display: inline-block;
   padding: 10px 20px;
-  background-color: var(--primary-color);
   color: var(--primary-text-color);
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
 
-.button:hover {
+.button {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+}
+
+.button:hover, .secondButton:hover {
   background-color: var(--primary-button-hover);
+  border-width: 2px;
+}
+
+.secondButton {
+  background-color: var(--primary-menu-bg);
+  border: 1px solid var(--primary-color);
+}
+
+.secondButton:hover {
+  background-color: var(--primary-content-bg);
+  border-color: var(--primary-color);
+}
+
+.buttonList ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
 /* Hauptnavigation und Footer */

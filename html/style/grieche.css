@@ -18,6 +18,9 @@ body {
   --pizza-about-1: url("../images/grieche/about-1.jpg");
   --pizza-about-2: url("../images/grieche/about-2.jpg");
   --pizza-about-3: url("../images/grieche/about-3.jpg");
+
+  --second-button-bg: #fafafa;
+  --second-button-hover: #fff;
 }
 
 @font-face {
@@ -60,18 +63,49 @@ a:hover:not(.button) {
   color: var(--primary-color);
 }
 
-.button {
+.button, .secondButton {
   display: inline-block;
   padding: 10px 20px;
-  background-color: var(--primary-color);
   color: var(--primary-text-color);
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
 
-.button:hover {
+.button {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+}
+
+.button:hover, .secondButton:hover {
   background-color: var(--primary-button-hover);
+  border-width: 2px;
+}
+
+.secondButton {
+  background-color: var(--primary-menu-bg);
+  border: 1px solid var(--primary-color);
+}
+
+.secondButton:hover {
+  background-color: var(--primary-content-bg);
+  border-color: var(--primary-color);
+}
+
+.buttonList ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.buttonList ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
 /* Hauptnavigation und Footer */
