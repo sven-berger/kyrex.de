@@ -37,7 +37,6 @@ body {
   font-display: swap;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -70,7 +69,8 @@ a:hover:not(.button) {
   color: var(--primary-color);
 }
 
-.button, .secondButton {
+.button,
+.secondButton {
   display: inline-block;
   padding: 10px 20px;
   color: var(--primary-text-color);
@@ -84,7 +84,8 @@ a:hover:not(.button) {
   color: var(--primary-text-color);
 }
 
-.button:hover, .secondButton:hover {
+.button:hover,
+.secondButton:hover {
   background-color: var(--primary-button-hover);
   border-width: 2px;
 }
@@ -199,7 +200,8 @@ a:hover:not(.button) {
 
 /* Gemeinsame Abschnitte: Über uns und Kontakt */
 .aboutUs,
-.contact {
+.contact,
+.reservation {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,6 +209,7 @@ a:hover:not(.button) {
   background-color: var(--primary-content-bg);
   color: var(--primary-text-color);
   min-height: 50vh;
+  padding-top: 3rem;
 }
 
 /* Über uns und Bildergalerie */
@@ -261,10 +264,12 @@ a:hover:not(.button) {
   min-height: 50vh;
   color: var(--primary-text-color);
   opacity: 0.9;
+  padding: 3rem;
 }
 
 /* Kontaktbereich */
-.contactContainer {
+.contactContainer,
+.reservationContainer {
   display: grid;
   gap: clamp(2rem, 4vw, 2.5rem);
   align-items: center;
@@ -277,13 +282,34 @@ a:hover:not(.button) {
 }
 
 .contactTeam img {
-  width: 50%;
+  width: 100%;
   border-radius: 10px;
+}
+
+form {
+  gap: 5px;
+  display: grid;
+}
+
+input {
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--primary-text-color);
+}
+
+label {
+  visibility: hidden;
+}
+
+.reservationForm .button {
+  margin: 20px 0;
+  text-align: center;
 }
 
 /* Gemeinsame Inhaltsbreite */
 .aboutUsContainer,
-.contactContainer {
+.contactContainer,
+.reservationContainer {
   width: min(75rem, calc(100% - 4rem));
 }
 
@@ -326,13 +352,15 @@ a:hover:not(.button) {
   }
 
   .aboutUs,
-  .contact {
+  .contact,
+  .reservation {
     min-height: 0;
     padding: 3rem 0;
   }
 
   .aboutUsContainer,
-  .contactContainer {
+  .contactContainer,
+  .reservationContainer {
     width: calc(100% - 2rem);
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -347,10 +375,6 @@ a:hover:not(.button) {
   .aboutUsPictures img:first-child {
     grid-column: span 2;
     grid-row: auto;
-  }
-
-  .contactTeam img {
-    width: 100%;
   }
 
   .info {

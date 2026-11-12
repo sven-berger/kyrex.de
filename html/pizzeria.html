@@ -11,7 +11,8 @@
       <nav class="mainMenu">
         <ul>
           <li><a href="#aboutUs">Über uns</a></li>
-          <li>Speisekarte</li>
+          <li><a href="#menu">Speisekarte</a></li>
+          <li><a href="#reservation">Tisch reservieren</a></li>
           <li><a href="#openingHours">Öffnungszeiten</a></li>
         </ul>
       </nav>
@@ -101,7 +102,7 @@
             12345 Musterstadt
           </p>
           <p>
-            01234 567890<br/>
+            01234 567890<br />
             info@mammamia.de
           </p>
           <div class="buttonList">
@@ -115,6 +116,56 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
+        </div>
+      </div>
+    </div>
+    <div class="reservation" id="reservation">
+      <div class="reservationContainer">
+        <div class="reservationForm">
+          <h2>Reservierung</h2>
+          <form method="post">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Ihr Name"
+              required
+            />
+            <label for="email">E-Mail:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Ihre E-Mail"
+              required
+            />
+            <label for="date">Datum:</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              placeholder="Datum"
+              required
+            />
+            <label for="time">Uhrzeit:</label>
+            <input
+              type="time"
+              id="time"
+              name="time"
+              placeholder="Uhrzeit"
+              required
+            />
+            <label for="guests">Anzahl der Gäste:</label>
+            <input
+              type="number"
+              id="guests"
+              name="guests"
+              placeholder="Anzahl der Gäste"
+              required
+            />
+            <button type="submit" class="button">Reservieren</button>
+          </form>
         </div>
       </div>
     </div>

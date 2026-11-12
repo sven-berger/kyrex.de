@@ -11,7 +11,8 @@
       <nav class="mainMenu">
         <ul>
           <li><a href="#aboutUs">Über uns</a></li>
-          <li>Speisekarte</li>
+          <li><a href="#menu">Speisekarte</a></li>
+          <li><a href="#reservation">Tisch reservieren</a></li>
           <li><a href="#openingHours">Öffnungszeiten</a></li>
         </ul>
       </nav>
@@ -58,7 +59,7 @@
           <tbody>
             <tr>
               <td>Montag</td>
-              <td>11:30 - 14:30<br>17:30 - 24:00</td>
+              <td>11:30 - 14:30<br />17:30 - 24:00</td>
             </tr>
             <tr>
               <td>Dienstag</td>
@@ -66,23 +67,23 @@
             </tr>
             <tr>
               <td>Mittwoch</td>
-              <td>11:30 - 14:30<br>17:30 - 24:00</td>
+              <td>11:30 - 14:30<br />17:30 - 24:00</td>
             </tr>
             <tr>
               <td>Donnerstag</td>
-              <td>11:30 - 14:30<br>17:30 - 24:00</td>
+              <td>11:30 - 14:30<br />17:30 - 24:00</td>
             </tr>
             <tr>
               <td>Freitag</td>
-              <td>11:30 - 14:30<br>17:30 - 02:00</td>
+              <td>11:30 - 14:30<br />17:30 - 02:00</td>
             </tr>
             <tr>
               <td>Samstag</td>
-              <td>11:30 - 14:30<br>17:30 - 23:00</td>>
+              <td>11:30 - 14:30<br />17:30 - 23:00</td>
             </tr>
             <tr>
               <td>Sonntag</td>
-              <td>09:30 - 14:30<br>17:30 - 21:00</td>
+              <td>09:30 - 14:30<br />17:30 - 21:00</td>
             </tr>
           </tbody>
         </table>
@@ -101,13 +102,19 @@
             12345 Musterstadt
           </p>
           <p>
-            01234 567890<br/>
+            01234 567890<br />
             info@poseidon.de
           </p>
           <div class="buttonList">
             <ul>
-              <li><p class="button">Anrufen</p></li>
-              <li><p class="secondButton">E-Mail schreiben</p></li>
+              <li>
+                <p class="button"><a href="tel:+49 1234567890">Anrufen</a></p>
+              </li>
+              <li>
+                <p class="secondButton">
+                  <a href="mailto:info@poseidon.de">E-Mail schreiben</a>
+                </p>
+              </li>
             </ul>
           </div>
           <h3>Anfahrt</h3>
@@ -115,6 +122,56 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
+        </div>
+      </div>
+    </div>
+    <div class="reservation" id="reservation">
+      <div class="reservationContainer">
+        <div class="reservationForm">
+          <h2>Reservierung</h2>
+          <form method="post">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Ihr Name"
+              required
+            />
+            <label for="email">E-Mail:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Ihre E-Mail"
+              required
+            />
+            <label for="date">Datum:</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              placeholder="Datum"
+              required
+            />
+            <label for="time">Uhrzeit:</label>
+            <input
+              type="time"
+              id="time"
+              name="time"
+              placeholder="Uhrzeit"
+              required
+            />
+            <label for="guests">Anzahl der Gäste:</label>
+            <input
+              type="number"
+              id="guests"
+              name="guests"
+              placeholder="Anzahl der Gäste"
+              required
+            />
+            <button type="submit" class="button">Reservieren</button>
+          </form>
         </div>
       </div>
     </div>
