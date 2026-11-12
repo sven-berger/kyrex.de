@@ -350,7 +350,7 @@ a:hover:not(.button) {
   }
 
   .contactTeam img {
-    width: 100% !important;
+    width: 100%;
   }
 
   .info {
