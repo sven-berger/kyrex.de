@@ -340,11 +340,6 @@ a:hover:not(.button) {
     grid-row: auto;
   }
 
-  .contactTeam img {
-    display: block;
-    height: auto;
-  }
-
   .info {
     min-height: 0;
     padding: 2rem;
