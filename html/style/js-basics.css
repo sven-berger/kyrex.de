@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fcfcfc;
+  background-image: url("https://samwilliam.de/images/style-22/custom/background_gutekunde.png");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #e8f5f6;
+
+  @media (max-width: 768px) {
+    background-attachment: scroll;
+  }
+
+  --primary-bg-color: #fafafa;
+  --container-bg-color: #fff;
+  --container-border-radius: 23px;
+
+  --border-color: #ecf0f1;
+
+  --button-bg-color: #91c5cdff;
+  --button-hover-bg-color: #7fadb4ff;
+  --button-border-radius: 12px;
+}
+
+.container {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: var(--container-border-radius);
+  background-color: var(--container-bg-color);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+main {
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  max-width: 1600px;
+  min-height: 90vh;
+  margin: 0 auto;
+  background-color: var(--primary-bg-color);
+  border-radius: var(--container-border-radius);
+  border: 2px solid #bdc3c7;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: var(--button-bg-color);
+  color: white;
+  border: none;
+  border-radius: var(--button-border-radius);
+}
+
+.button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(50, 138, 150);
+}
+
+h1:before,
+h1:after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--border-color);
+  margin: 0 10px;
+}
+
+.counterContainer {
+  display: grid;
+  gap: 10px;
+}
+
+.counterValue {
+  font-size: 24px;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--button-border-radius);
+  background-color: var(--container-bg-color);
+}
